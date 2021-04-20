@@ -43,16 +43,36 @@ public class Menu {
             if (materia == 1) {
 
                 System.out.println(materia + " La materia elejida es:");
+                System.out.println("");
+                System.out.println("------Temario----");
+                System.out.println("----------");
+                System.out.println("");
+                System.out.println("----------");
+                System.out.println("");
+                System.out.println("----------");
             } else if (materia == 2) {
                 System.out.println(materia + " La materia elejida es:");
+                System.out.println("------Temario----");
+                System.out.println("----------");
+                System.out.println("");
+                System.out.println("----------");
+                System.out.println("");
+                System.out.println("----------");
 
             } else if (materia == 3) {
 
                 System.out.println(materia + " La materia elejida es:");
-            } else{
-        System.out.println("Materia no encontrada porfavor reiniciar el programa");
-                }
-    }
+                System.out.println("------Temario----");
+                System.out.println("----------");
+                System.out.println("");
+                System.out.println("----------");
+                System.out.println("");
+                System.out.println("----------");
+            } else {
+                System.out.println("Materia no encontrada porfavor reiniciar el programa");
+            }
+
+        }
 
     }
 }
