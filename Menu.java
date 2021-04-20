@@ -21,6 +21,7 @@ public class Menu {
         Scanner lector = new Scanner(System.in);
         int salir = 0;
         int materia = 0;
+        int tema = 0;
         System.out.println("------Menú------");
         System.out.println("------Codigo:" + "-------");
         System.out.println("-------Materia:" + "------");
@@ -40,7 +41,7 @@ public class Menu {
         } else {
             System.out.println("Ingrese el codigo de la materia a presentar");
             materia = lector.nextInt();
-            if (materia == 1) {
+            if (materia == 1) { // para elegir la materia
 
                 System.out.println(materia + " La materia elejida es:");
                 System.out.println("");
@@ -50,7 +51,20 @@ public class Menu {
                 System.out.println("----------");
                 System.out.println("");
                 System.out.println("----------");
-            } else if (materia == 2) {
+                System.out.println("");
+                System.out.println("Elige el tema a ver");
+                tema = lector.nextInt();
+                if (tema == 1) {
+                    System.out.println("https://www.youtube.com/watch?v=YMHFk7Yh_jE&list=TLPQMTkwNDIwMjGW-79GOWXfBQ&index=3");
+
+                } else if (tema == 2) {
+
+                    System.out.println("https://www.youtube.com/watch?v=YMHFk7Yh_jE&list=TLPQMTkwNDIwMjGW-79GOWXfBQ&index=3");
+                } else if (tema == 3) {
+                    System.out.println("https://www.youtube.com/watch?v=YMHFk7Yh_jE&list=TLPQMTkwNDIwMjGW-79GOWXfBQ&index=3");
+                }
+
+            } else if (materia == 2) {// para elegir la materia
                 System.out.println(materia + " La materia elejida es:");
                 System.out.println("------Temario----");
                 System.out.println("----------");
@@ -58,8 +72,19 @@ public class Menu {
                 System.out.println("----------");
                 System.out.println("");
                 System.out.println("----------");
+                System.out.println("Elige el tema a ver");
+                tema = lector.nextInt();
+                if (tema == 1) {
+                    System.out.println("https://www.youtube.com/watch?v=YMHFk7Yh_jE&list=TLPQMTkwNDIwMjGW-79GOWXfBQ&index=3");
 
-            } else if (materia == 3) {
+                } else if (tema == 2) {
+
+                    System.out.println("https://www.youtube.com/watch?v=YMHFk7Yh_jE&list=TLPQMTkwNDIwMjGW-79GOWXfBQ&index=3");
+                } else if (tema == 3) {
+                    System.out.println("https://www.youtube.com/watch?v=YMHFk7Yh_jE&list=TLPQMTkwNDIwMjGW-79GOWXfBQ&index=3");
+                }
+
+            } else if (materia == 3) {// para elegir la materia 
 
                 System.out.println(materia + " La materia elejida es:");
                 System.out.println("------Temario----");
@@ -68,6 +93,17 @@ public class Menu {
                 System.out.println("----------");
                 System.out.println("");
                 System.out.println("----------");
+                System.out.println("Elige el tema a ver");
+                tema = lector.nextInt();
+                if (tema == 1) {//para elegir el tema a ver 
+                    System.out.println("https://www.youtube.com/watch?v=YMHFk7Yh_jE&list=TLPQMTkwNDIwMjGW-79GOWXfBQ&index=3");
+
+                } else if (tema == 2) {
+
+                    System.out.println("https://www.youtube.com/watch?v=YMHFk7Yh_jE&list=TLPQMTkwNDIwMjGW-79GOWXfBQ&index=3");
+                } else if (tema == 3) {
+                    System.out.println("https://www.youtube.com/watch?v=YMHFk7Yh_jE&list=TLPQMTkwNDIwMjGW-79GOWXfBQ&index=3");
+                }
             } else {
                 System.out.println("Materia no encontrada porfavor reiniciar el programa");
             }
