@@ -7,14 +7,12 @@ package trabajofinal;
 
 /**
  *
- * @author u
+ * @author garci
  */
-public class Estudiante {
+public class Directivo {
     
-    public String nombre = "";
-    public String documento = "";
-    public int edad = 0;
-    public int grado = 0;
+    public String nombreDirectivo = "";
+    public String documentoDirectivo = "";
     public String sexo = "";
-    public int codHorario = 0;
+    public String tipoContrato = "";
 }
