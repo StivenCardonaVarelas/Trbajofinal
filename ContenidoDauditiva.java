@@ -125,6 +125,7 @@ public class ContenidoDauditiva{
                 } else if (tema == 3) {
                     System.out.println("https://www.youtube.com/watch?v=YMHFk7Yh_jE&list=TLPQMTkwNDIwMjGW-79GOWXfBQ&index=3");
                 }
+                valor = true;
             }else if(busqueda == codigo4){
                 System.out.println("¡Materia encontrada!");
                 System.out.println("La materia elejida es: " + materia4);
@@ -148,6 +149,7 @@ public class ContenidoDauditiva{
                 } else if (tema == 3) {
                     System.out.println("https://www.youtube.com/watch?v=YMHFk7Yh_jE&list=TLPQMTkwNDIwMjGW-79GOWXfBQ&index=3");
                 }
+                valor = true;
             }
         }
     }

@@ -31,9 +31,9 @@ public class EstudianteDiscapacidadVisual extends Estudiante{
     }
     
     public void seleccionarMateria(){
-        if(horario == 1){
+        if(codHorario == 1){
             contenido.horario1();
-        }else if(horario == 2){
+        }else if(codHorario == 2){
             contenido.horario2();
         }else{
             System.out.println("valor incorrecto");

@@ -35,8 +35,11 @@ public class Main {
         System.out.println("Digite el número de estudiantes con discpacidad visual a registrar: ");
         int numeroEstudiantesDvisual = Integer.parseInt(lector.nextLine());
         EstudianteDiscapacidadVisual[] discapacidadVisual = new EstudianteDiscapacidadVisual[numeroEstudiantesDvisual];
+        for (int i = 0; i < numeroEstudiantesDvisual; i++) {
+            discapacidadVisual[i] = new EstudianteDiscapacidadVisual("", "", "", "", "", 0);
+        }
         //discapacidadVisual[numeroEstudiantesDvisual] = new EstudianteDiscapacidadVisual("","","","","","");
-        EstudianteDiscapacidadVisual discpacidadVisual = new EstudianteDiscapacidadVisual("", "", "", "", "", 0);
+        //EstudianteDiscapacidadVisual discpacidadVisual = new EstudianteDiscapacidadVisual("", "", "", "", "", 0);
 
         for (int i = 0; i < numeroEstudiantesDvisual; i++) {
             System.out.println("\nDigite el nombre del estudiante " + (i + 1));
@@ -104,20 +107,26 @@ public class Main {
             while (valido == false) {
                 System.out.println("Seleccione el horario del estudiante");
                 System.out.println("1) horario 1 \n2) horario 2");
-                int HorarioDvisual = Integer.parseInt(lector.nextLine());
-                if (HorarioDvisual == 1) {
-                    codHorario = 1;
-                    valido = true;
-                } else if (HorarioDvisual == 2) {
-                    codHorario = 2;
+                codHorario = Integer.parseInt(lector.nextLine());
+
+                if (codHorario == 1 || codHorario == 2) {
+                    System.out.println("Horario asignado.");
                     valido = true;
                 } else {
                     System.err.println("*** Valor incorrecto ***");
                 }
             }
-
-            discpacidadVisual.inscribir();
+//                if (HorarioDvisual == 1) {
+//                    codHorario = 1;
+//                    valido = true;
+//                } else if (HorarioDvisual == 2) {
+//                    codHorario = 2;
+//                    valido = true;
+//                } else {
+//                    System.err.println("*** Valor incorrecto ***");
+//                }
             discapacidadVisual[i] = new EstudianteDiscapacidadVisual(nivelCeguera, nombreDvisual, causaCeguera, documentoDvisual, sexoDvisual, codHorario);
+
         }
 
         for (int i = 0; i < numeroEstudiantesDvisual; i++) {
@@ -127,21 +136,22 @@ public class Main {
             System.out.println("Causa de la ceguera del estudiante " + (i + 1) + ": " + discapacidadVisual[i].causaCeguera);
             System.out.println("nivel de ceguera del estudiante " + (i + 1) + ": " + discapacidadVisual[i].nivelCeguera);
 
-            System.out.println("\nHorario asignado");
-            if (discapacidadVisual[i].codHorario == 1) {
-                discpacidadVisual.horario = 1;
-            } else if (discapacidadVisual[i].codHorario == 2) {
-                discpacidadVisual.horario = 2;
-            }
-            discpacidadVisual.seleccionarMateria();
-
+//            System.out.println("\nHorario asignado");
+//            if (discapacidadVisual[i].codHorario == 1) {
+//                discpacidadVisual.horario = 1;
+//            } else if (discapacidadVisual[i].codHorario == 2) {
+//                discpacidadVisual.horario = 2;
+//            }
+//            discpacidadVisual.seleccionarMateria();
+            discapacidadVisual[i].seleccionarMateria();
+            discapacidadVisual[i].inscribir();
         }
 
 //----------------------------------------------------------------------
         System.out.println("\nDigite el número de estudiantes con discapacidad auditiva a registrar: ");
         int numeroEstudiantesDauditiva = Integer.parseInt(lector.nextLine());
         EstudianteDiscapacidadAuditiva[] estudianteDauditiva = new EstudianteDiscapacidadAuditiva[numeroEstudiantesDauditiva];
-        EstudianteDiscapacidadAuditiva estudiantesDauditiva = new EstudianteDiscapacidadAuditiva("", "", "", "", "", 0);
+        //EstudianteDiscapacidadAuditiva estudiantesDauditiva = new EstudianteDiscapacidadAuditiva("", "", "", "", "", 0);
 
         for (int i = 0; i < numeroEstudiantesDauditiva; i++) {
             System.out.println("Digite el nombre del estudiante: " + (i + 1));
@@ -211,20 +221,31 @@ public class Main {
             while (valido == false) {
                 System.out.println("Seleccione el horario del estudiante");
                 System.out.println("1) horario 1 \n2) horario 2");
-                int HorarioDauditiva = Integer.parseInt(lector.nextLine());
-                if (HorarioDauditiva == 1) {
-                    codHorario = 1;
-                    valido = true;
-                } else if (HorarioDauditiva == 2) {
-                    codHorario = 2;
+                codHorario = Integer.parseInt(lector.nextLine());
+
+                if (codHorario == 1 || codHorario == 2) {
+                    System.out.println("Horario asignado.");
                     valido = true;
                 } else {
                     System.err.println("*** Valor incorrecto ***");
                 }
             }
-            estudiantesDauditiva.inscribir();
-            estudianteDauditiva[i] = new EstudianteDiscapacidadAuditiva(documentoDauditiva, nombreDauditiva, sexoDauditiva, nivelDauditiva, causaDauditiva, codHorario);
 
+//            while (valido == false) {
+//                System.out.println("Seleccione el horario del estudiante");
+//                System.out.println("1) horario 1 \n2) horario 2");
+//                int HorarioDauditiva = Integer.parseInt(lector.nextLine());
+//                if (HorarioDauditiva == 1) {
+//                    codHorario = 1;
+//                    valido = true;
+//                } else if (HorarioDauditiva == 2) {
+//                    codHorario = 2;
+//                    valido = true;
+//                } else {
+//                    System.err.println("*** Valor incorrecto ***");
+//                }
+//            }
+            estudianteDauditiva[i] = new EstudianteDiscapacidadAuditiva(documentoDauditiva, nombreDauditiva, sexoDauditiva, nivelDauditiva, causaDauditiva, codHorario);
         }
 
         for (int i = 0; i < numeroEstudiantesDauditiva; i++) {
@@ -234,21 +255,21 @@ public class Main {
             System.out.println("Causa de la discpacidad del estudiante " + (i + 1) + ": " + estudianteDauditiva[i].causaDauditiva);
             System.out.println("nivel de discpacidad auditiva del estudiante " + (i + 1) + ": " + estudianteDauditiva[i].nivelDauditiva);
 
-            System.out.println("\nHorario asignado");
-            if (discapacidadVisual[i].codHorario == 1) {
-                estudiantesDauditiva.horario = 1;
-            } else if (discapacidadVisual[i].codHorario == 2) {
-                estudiantesDauditiva.horario = 2;
-            }
-            estudiantesDauditiva.seleccionarMateria();
-
+//            System.out.println("\nHorario asignado");
+//            if (discapacidadVisual[i].codHorario == 1) {
+//                estudiantesDauditiva.horario = 1;
+//            } else if (discapacidadVisual[i].codHorario == 2) {
+//                estudiantesDauditiva.horario = 2;
+//            }
+            estudianteDauditiva[i].seleccionarMateria();
+            estudianteDauditiva[i].inscribir();
         }
 //--------------------------------------------------------------------------------------
 
         System.out.println("\nDigite el número de maestros a registrar: ");
         int numeroMaestros = Integer.parseInt(lector.nextLine());
         Maestro[] maestro = new Maestro[numeroMaestros];
-        Maestro maestro1 = new Maestro("", "", "", "", "");
+        // Maestro maestro1 = new Maestro("", "", "", "", "");
 
         for (int i = 0; i < numeroMaestros; i++) {
             System.out.println("\nDigite el nombre del maestro " + (i + 1));
@@ -295,8 +316,6 @@ public class Main {
                     System.err.println("*** Valor incorrecto ***");
                 }
             }
-
-            maestro1.registrar();
             maestro[i] = new Maestro(documentoDirectivo, nombreDirectivo, sexoDirectivo, especializacion, tipoContrato);
         }
 
@@ -306,13 +325,15 @@ public class Main {
             System.out.println("Sexo del maestro " + (i + 1) + ": " + maestro[i].sexo);
             System.out.println("Especialización del maestro " + (i + 1) + ": " + maestro[i].especializacion);
             System.out.println("Tipo de contrato del maestro " + (i + 1) + ": " + maestro[i].tipoContrato);
+
+            maestro[i].registrar();
         }
 //---------------------------------------------------------------
 
         System.out.println("\nDigite el número de coordinadores a registrar");
         int numeroCoordinadores = Integer.parseInt(lector.nextLine());
         Coordinador[] coordinador = new Coordinador[numeroCoordinadores];
-        Coordinador coordinador1 = new Coordinador("", "", "", "", "", "");
+        // Coordinador coordinador1 = new Coordinador("", "", "", "", "", "");
 
         for (int i = 0; i < numeroCoordinadores; i++) {
             System.out.println("Digite el nombre del coordinador " + (i + 1));
@@ -368,9 +389,8 @@ public class Main {
             } else if (TipoCargo == 2) {
                 tipoCargo = "disciplinario";
             }
-
-            coordinador1.registrar();
             coordinador[i] = new Coordinador(documentoDirectivo, nombreDirectivo, sexoDirectivo, tipoCargo, tipoContrato, especializacion);
+            coordinador[i].registrar();
         }
 //-----------------------------------------------------------------------
 
@@ -385,7 +405,7 @@ public class Main {
                     System.out.println("Nombre: " + discapacidadVisual[i].nombre + "\nDocumento: " + discapacidadVisual[i].documento);
                     System.out.println("Sexo: " + discapacidadVisual[i].sexo + "\nCausa ceguera: " + discapacidadVisual[i].causaCeguera);
                     System.out.println("Nivel de ceguera: " + discapacidadVisual[i].nivelCeguera);
-
+                    discapacidadVisual[i].seleccionarMateria();
                 } else if (maestro[i].documentoDirectivo.equals(busquedaDocumento)) {
                     System.out.println("¡Maestro encontrado!");
                     System.out.println("Nombre: " + maestro[i].nombreDirectivo + "\nDocumento: " + maestro[i].documentoDirectivo);
@@ -396,7 +416,7 @@ public class Main {
                     System.out.println("Nombre: " + estudianteDauditiva[i].nombre + "\nDocumento: " + estudianteDauditiva[i].documento);
                     System.out.println("Sexo: " + estudianteDauditiva[i].sexo + "\nCausa discapacidad: " + estudianteDauditiva[i].causaDauditiva);
                     System.out.println("Nivel de discapacidad auditiva: " + estudianteDauditiva[i].nivelDauditiva);
-                    discpacidadVisual.seleccionarMateria();
+                    estudianteDauditiva[i].seleccionarMateria();
                 } else if (coordinador[i].documentoDirectivo.equals(busquedaDocumento)) {
                     System.out.println("Coordinador encontrado");
                     System.out.println("Nombre: " + coordinador[i].nombreDirectivo + "\nDocumento: " + coordinador[i].documentoDirectivo);
@@ -413,24 +433,37 @@ public class Main {
                 }
             }
         }
-        
-        valido = false;
 
-        System.out.println("Bienvenido al buscador de horario");
-        System.out.println("Digite (1) si está en clase de discapacidad visual");
-        System.out.println("Digite (2) si está en clase de discapacidad auditiva");
-        int buscadorClases = Integer.parseInt(lector.nextLine());
-        while (valido == false) {
-
+        for (int i = 0; i < 1; i++) {
+            System.out.println("Bienvenido al buscador de horario");
+            System.out.println("Digite (1) si está en clase de discapacidad visual");
+            System.out.println("Digite (2) si está en clase de discapacidad auditiva");
+            int buscadorClases = Integer.parseInt(lector.nextLine());
             if (buscadorClases == 1) {
-                discpacidadVisual.busqueda();
-                valido = true;
+                discapacidadVisual[i].busqueda();               
             } else if (buscadorClases == 2) {
-                tipoContrato = "Temporal";
-                estudiantesDauditiva.busqueda();
-                valido = true;
+                estudianteDauditiva[i].busqueda();
+            }else{
+                System.out.println("número equivocado");
             }
         }
+
+//        valido = false;
+//
+//        System.out.println("Bienvenido al buscador de horario");
+//        System.out.println("Digite (1) si está en clase de discapacidad visual");
+//        System.out.println("Digite (2) si está en clase de discapacidad auditiva");
+//        int buscadorClases = Integer.parseInt(lector.nextLine());
+//        while (valido == false) {
+//
+//            if (buscadorClases == 1) {
+//                discapacidadVisual[numeroEstudiantesDvisual].busqueda();
+//                valido = true;
+//            } else if (buscadorClases == 2) {
+//
+//                estudianteDauditiva[numeroEstudiantesDauditiva].busqueda();
+//            }
+//        }
 
     }
 }

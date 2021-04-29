@@ -147,6 +147,7 @@ public class ContenidoDvisual {
                 } else if (tema == 3) {
                     System.out.println("https://www.youtube.com/watch?v=YMHFk7Yh_jE&list=TLPQMTkwNDIwMjGW-79GOWXfBQ&index=3");
                 }
+                valor = true;
             }
         }
     }
